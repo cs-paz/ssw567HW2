@@ -1,1 +1,1 @@
-[![build status of master](https://travis-ci.com/cs-paz/ssw567HW2.svg?branch=master)](https://travis-ci.org/cs-paz/ssw567HW2)
+[![Build Status](https://app.travis-ci.com/cs-paz/ssw567HW2.svg?branch=main)](https://app.travis-ci.com/cs-paz/ssw567HW2)
