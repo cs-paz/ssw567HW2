@@ -27,7 +27,7 @@ class TestTriangles(unittest.TestCase):
     def testRightTriangle1(self): 
         self.assertEqual(classifyTriangle(3,4,5),'Right','3,4,5 is a right triangle')
     def testRightTriangle2(self): 
-        self.assertEqual(classifyTriangle(5,3,4),'Right','5,3,4 is a right triangle')
+        self.assertEqual(classifyTriangle(8,15,17),'Right','8,15,17 is a right triangle')
     def testRightTriangle3(self):
         self.assertEqual(classifyTriangle(5,12,13),'Right','5,12,13 is a right triangle')
 
@@ -39,18 +39,18 @@ class TestTriangles(unittest.TestCase):
         self.assertEqual(classifyTriangle(3,3,3),'Equilateral','3,3,3 is an equilateral triangle')
 
     def testScaleneTriangle1(self):
-        self.assertEqual(classifyTriangle(1,2,3),'Scalene','1,2,3 is a scalene triangle')
+        self.assertEqual(classifyTriangle(10,11,12),'Scalene','10,11,12 is a scalene triangle')
     def testScaleneTriangle2(self):
-        self.assertEqual(classifyTriangle(3,5,9),'Scalene','3,5,9 is a scalene triangle')
+        self.assertEqual(classifyTriangle(5,8,6),'Scalene','5,8,6 is a scalene triangle')
     def testScaleneTriangle3(self):
-        self.assertEqual(classifyTriangle(4,1,9),'Scalene','4,1,9 is a scalene triangle')
+        self.assertEqual(classifyTriangle(10,12,14),'Scalene','10,12,14 is a scalene triangle')
     
     def testIsoscelesTriangle1(self):
         self.assertEqual(classifyTriangle(3,2,2),'Isosceles','3,2,2 is an isosceles triangle')
     def testIsoscelesTriangle2(self):
         self.assertEqual(classifyTriangle(5,7,5),'Isosceles','5,7,5 is an isosceles triangle')
     def testIsoscelesTriangle3(self):
-        self.assertEqual(classifyTriangle(1,1,9),'Isosceles','1,1,9 is an isosceles triangle')
+        self.assertEqual(classifyTriangle(3,3,5),'Isosceles','3,3,5 is an isosceles triangle')
 
 if __name__ == '__main__':
     print('Running unit tests')
