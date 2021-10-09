@@ -6,32 +6,38 @@ Updated Jan 21, 2018
 @author: rk
 """
 
-def classifyTriangle(a,b,c):
+def classify_triangle(_a, _b , _c):
+    "Function that returns a triangles classification string by taking sides a, b, c"
     # require that the input values be >= 0 and <= 200
-    if a > 200 or b > 200 or c > 200:
+    if _a > 200 or _b > 200 or _c > 200:
         return 'InvalidInput'
-        
-    if a <= 0 or b <= 0 or c <= 0:
+
+    if _a <= 0 or _b <= 0 or _c <= 0:
         return 'InvalidInput'
-    
-    # verify that all 3 inputs are integers  
+
+    # verify that all 3 inputs are integers
     # Python's "isinstance(object,type) returns True if the object is of the specified type
-    if not(isinstance(a,int) and isinstance(b,int) and isinstance(c,int)):
+    if not(isinstance(_a,int) and isinstance(_b,int) and isinstance(_c,int)):
         return 'InvalidInput'
-      
-    # This information was not in the requirements spec but 
+
+    # This information was not in the requirements spec but
     # is important for correctness
     # the sum of any two sides must be strictly less than the third side
     # of the specified shape is not a triangle
-    if (a >= (b + c)) or (b >= (a + c)) or (c >= (a + b)):
+    if (_a >= (_b + _c)) or (_b >= (_a + _c)) or (_c >= (_a + _b)):
         return 'NotATriangle'
-        
-    # now we know that we have a valid triangle 
-    if a == b and b == c:
-        return 'Equilateral'
-    elif ((a ** 2) + (b ** 2)) == (c ** 2):
-        return 'Right'
-    elif (a != b) and  (b != c) and (c != a):
-        return 'Scalene'
+
+    # now we know that we have a valid triangle
+
+    _str = ""
+
+    if _a == _b and _b == _c:
+        _str = 'Equilateral'
+    elif ((_a ** 2) + (_b ** 2)) == (_c ** 2):
+        _str = 'Right'
+    elif (_a != _b) and  (_b != _c) and (_c != _a):
+        _str = 'Scalene'
     else:
-        return 'Isosceles'
+        _str = 'Isosceles'
+
+    return _str
